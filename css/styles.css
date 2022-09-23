@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.main{
+    min-height: 100vh;
+    background-color: var(--dark-cyan);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.main::before{
+    content: "";
+    display: block;
+    background-image: url(../images/bg-pattern-top.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transform: translate(-50%, -50%);
+}
+
+.main::after{
+    content: "";
+    display: block;
+    background-image: url(../images/bg-pattern-bottom.svg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate(50%, 50%);
+}
+
+.card{
+    width: 90%;
+    max-width: 25rem;    
+    margin: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.card_picture{
+    width: 100%;    
+}
+
+.card__img{
+    width: 100%;
+    display: block;
+}
+
+.card__user{
+    text-align: center;
+    margin-top: -3.125em;
+    margin-bottom: 2em;
+}
+
+.card__userimg{
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+.card__userinfo{
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.card__username{
+    font-size: 1.125rem;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.card__userage{
+    font-size: 1.125rem;
+    color: var(--dark-grayish-blue);
+}
+
+.card__location{
+    color: var(--dark-grayish-blue);
+}
+
+.card__stats{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 1.5em 0;
+}
+
+.card__stats::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--dark-gray);
+}
+
+.card__statnumber{
+    font-size: 1.125rem;
+    color: var(--very-dark-desaturated-blue);
+    margin-bottom: 0.5em;
+}
+
+.card__statinfo{
+    font-size: 0.875rem;
+    color: var(--dark-grayish-blue);
+    letter-spacing: 1px;
+}
+
